@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resultados de la Revisión de Tesis</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">Resultados de la Revisión de Tesis</h1>
+
+      <div>
+        <h3>Observaciones de Contenido</h3>
+        {% if observaciones_contenido %}
+        <ul class="list-group">
+          {% for obs in observaciones_contenido %}
+          <li class="list-group-item">{{ obs }}</li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p>No se encontraron observaciones de contenido.</p>
+        {% endif %}
+      </div>
+
+      <div class="mt-4">
+        <h3>Observaciones de Estructura</h3>
+        {% if observaciones_estructura %}
+        <ul class="list-group">
+          {% for obs in observaciones_estructura %}
+          <li class="list-group-item">{{ obs }}</li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p>No se encontraron observaciones de estructura.</p>
+        {% endif %}
+      </div>
+
+      <div class="mt-4">
+        <h3>Observaciones de Metodología</h3>
+        {% if observaciones_metodologia %}
+        <ul class="list-group">
+          {% for obs in observaciones_metodologia %}
+          <li class="list-group-item">{{ obs }}</li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p>No se encontraron observaciones de metodología.</p>
+        {% endif %}
+      </div>
+
+      <a href="/" class="btn btn-primary mt-4 mb-4">Subir otra Tesis</a>
+    </div>
+  </body>
+</html>

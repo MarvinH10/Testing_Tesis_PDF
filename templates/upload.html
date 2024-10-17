@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subir Tesis</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">Subir Tesis para Revisión</h1>
+      <form method="POST" enctype="multipart/form-data" action="/uploader">
+        <div class="form-group">
+          <label for="file">Seleccionar archivo PDF:</label>
+          <input
+            type="file"
+            class="form-control-file"
+            id="file"
+            name="file"
+            accept="application/pdf"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Subir y Revisar</button>
+      </form>
+    </div>
+  </body>
+</html>
